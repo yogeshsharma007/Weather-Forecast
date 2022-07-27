@@ -1,0 +1,49 @@
+.row {
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    box-shadow: 1px 1px 9px 1px;
+    margin-bottom: 50px;
+}
+
+.left {
+    clear: both;
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.right {
+    float: right;
+    width: 45%;
+    text-align: right;
+}
+
+button {
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.head {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.body {
+    clear: both;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td,th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+}

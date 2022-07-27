@@ -1,0 +1,29 @@
+<div *ngIf="dataload" style="width: 100%; height:auto;">
+  <div class="row">
+    <div class="left">
+      <h1>Weather Forecast</h1>
+    </div>
+    <div class="right">
+      <button (click)="refresh()">Refresh</button>
+    </div>
+  </div>
+  <div>
+    <p class="head">5 Days <span style="color:rgb(54, 96, 173);">Actual</span> and <span style="color:rgb(173, 54, 54);">Feel</span> Temperature(Gap: 3 hours)</p>
+  </div>
+  <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>
+  <br>
+
+  <div class="body">
+    <p class="head"><u>Current Info:</u></p><br>
+    <div style="padding: 0 20px;">
+      <span>Current City : {{currentData.name}}</span><br>
+      <span>Current Temp : {{currentData.main.temp - 273.15 | number : '1.2-2'}}℃</span><br>
+      <span>Feel Temp : {{currentData.main.feels_like - 273.15 | number : '1.2-2'}}℃</span><br>
+      <span>Maximum Temp : {{currentData.main.temp_max - 273.15 | number : '1.2-2'}}℃</span><br>
+      <span>Minimum Temp : {{currentData.main.temp_min - 273.15 | number : '1.2-2'}}℃</span><br>
+      <span>Humidity : {{currentData.main.humidity}}%</span><br>
+
+    </div>
+  </div>
+
+</div>
